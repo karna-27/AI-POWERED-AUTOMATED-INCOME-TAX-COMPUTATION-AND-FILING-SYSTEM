@@ -1,0 +1,416 @@
+.tax-history-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.tax-history-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.tax-history-loading {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #e7f3ff;
+    border-radius: 8px;
+}
+
+.tax-history-spinner {
+    border: 4px solid rgba(0, 123, 255, 0.2);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tax-history-message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tax-history-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.tax-history-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.tax-history-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.no-records-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #e9ecef;
+}
+
+.history-list {
+    margin-top: 30px;
+}
+
+.history-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.history-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #34495e;
+}
+
+.history-item-header .timestamp {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.history-item-details p {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.history-item-details strong {
+    color: #555;
+}
+
+.history-item-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.view-details-button,
+.generate-itr-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-details-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.view-details-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.generate-itr-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.generate-itr-button:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.generate-itr-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* Styles for Selected Record Details */
+.selected-record-details {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.back-button {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+.selected-record-title {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Reusing .section-box styles from TaxUploader for consistency */
+.section-box {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-box h4 {
+    color: #0056b3;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-box h5 {
+    color: #34495e;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.section-box p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.section-box strong {
+    color: #555;
+}
+
+.document-processing-summary-section .document-status-item {
+    background-color: #e9eff5;
+    border: 1px solid #d0e0ed;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.document-processing-summary-section .document-status-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.document-processing-summary-section .document-status-item a:hover {
+    text-decoration: underline;
+}
+
+.status-success {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+
+.status-warning {
+    color: #ffc107; /* Orange */
+    font-weight: bold;
+}
+
+.status-error {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}
+
+.extracted-fields-preview,
+.extracted-raw-text-preview {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+}
+
+.aggregated-financial-data-section .section-title,
+.final-tax-computation-section .section-title {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #0056b3;
+}
+
+.income-details-section,
+.deductions-section,
+.taxation-summary-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.computation-detail {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+}
+
+.computation-detail:last-child {
+    border-bottom: none;
+}
+
+.highlight-regime {
+    font-weight: bold;
+    color: #28a745; /* Green to highlight regime */
+}
+
+.refund-amount {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #e6ffed;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c8e6c9;
+    margin-top: 20px;
+}
+
+.tax-due-amount {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffcdd2;
+    margin-top: 10px;
+}
+
+.computation-notes {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    border-top: 1px dashed #e0e0e0;
+    padding-top: 15px;
+}
+
+/* Suggestions specific styles (reused from TaxUploader) */
+.suggestions-output {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.suggestions-output .section-box {
+    background-color: #e7f3ff; /* Lighter blue background for suggestions */
+    border-left: 5px solid #007bff;
+}
+
+.suggestions-output .section-box h4 {
+    color: #0056b3;
+}
+
+.suggestions-list {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+.suggestions-list li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.gemini-regime-analysis {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tax-history-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    .tax-history-title, .selected-record-title {
+        font-size: 2em;
+    }
+    .history-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .history-item-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .view-details-button,
+    .generate-itr-button {
+        width: 100%;
+    }
+    .section-box {
+        padding: 15px;
+    }
+    .section-box h4 {
+        font-size: 1.4em;
+    }
+    .section-box h5 {
+        font-size: 1.2em;
+    }
+}

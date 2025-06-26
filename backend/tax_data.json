@@ -1,0 +1,94 @@
+[
+    {
+        "aggregated_financial_data": {
+            "Advance Tax Paid": 0,
+            "Age": 0,
+            "Basic Salary": 124822,
+            "Date of Birth": "N/A",
+            "Final Tax Payable": 0,
+            "Financial Year": "2014-15",
+            "Gender": "N/A",
+            "Gross Annual Salary": 178822,
+            "HRA Received": 0,
+            "Interest on Home Loan Deduction (Section 24(b))": 157500,
+            "Name": "Employee A",
+            "Net Taxable Income": 0,
+            "Other Deductions (80CCD, 80G, etc.) Claimed": 0,
+            "PAN": "ABCDE1234F",
+            "Professional Tax": 600,
+            "Refund Due from Tax (Rule-Based)": 4728,
+            "Rent Paid": 0,
+            "Residential Status": "N/A",
+            "Section 80C Investments Claimed": 15903,
+            "Section 80D (Health Insurance Premiums) Claimed": 0,
+            "Section 80E (Education Loan Interest) Claimed": 0,
+            "Standard Deduction Claimed": 50000,
+            "TDS Deducted": 4728,
+            "Tax Due to Government (Rule-Based)": 0,
+            "Tax Regime Chosen": "Old Regime",
+            "Total Exempt Allowances Claimed": 40800
+        },
+        "document_processing_summary": [
+            {
+                "extracted_fields": {
+                    "Advance Tax Paid": 0,
+                    "Age": 0,
+                    "Basic Salary": 124822,
+                    "Date of Birth": "N/A",
+                    "Financial Year": "2014-15",
+                    "Gender": "N/A",
+                    "Gross Annual Salary": 178822,
+                    "HRA Received": 0,
+                    "Interest on Home Loan Deduction (Section 24(b))": 157500,
+                    "Name": "Employee A",
+                    "Other Deductions (80CCD, 80G, etc.) Claimed": 0,
+                    "PAN": "ABCDE1234F",
+                    "Professional Tax": 600,
+                    "Rent Paid": 0,
+                    "Residential Status": "N/A",
+                    "Section 80C Investments Claimed": 15903,
+                    "Section 80D (Health Insurance Premiums) Claimed": 0,
+                    "Section 80E (Education Loan Interest) Claimed": 0,
+                    "Standard Deduction Claimed": 50000,
+                    "TDS Deducted": 4728,
+                    "Tax Regime Chosen": "Old Regime",
+                    "Total Exempt Allowances Claimed": 40800
+                },
+                "extracted_raw_text": "FORM NO. 16\n[See rule 31(1)(a)\nPART A\nCertificate under section 203 of the Income-tax Act, 1961 for Tax deducted at source on Salary\nName and Address of the Employer\nName and Designation of the Employee\nEmployee A\nSenior Executive\nABC Company\n9/1, Mahalaxmi Chambers\nMG Road\nBangalore\nPAN of the Deductor\nTAN of the Deductor\nKARA07884F\nPAN of the Employee\nCIT (TDS)\nABCDE1234F\nAssessment Year\nAddress\n: No. 223, TTK Road\nCity\nPincode\n: Bangalore\n: 560043\n2014-2015\nSummary of tax deducted at source\nQuarter\nQuarter 1\nQuarter 2\nReceipt Numbers of original statements of\nTDS under sub-section (3) of section 200\n1282676315\nQuarter 3\nQuarter 4\nTotal\nPeriod\nFrom\n1-Apr-2013\nTo\n31-Mar-2014\nAmount of tax\nAmount of tax\ndeducted in respect of\nthe employee\n1,182.00\ndeposited / remitted in\nrespect of the employee\n1,182.00\n1,182.00\n1,182.00\nPART B\nDetails of Salary paid and any other income and tax deducted\n1. Gross Salary\na) Salary as per Provisions contained in sec. 17(1)\n1,24,822.00\nb) Value of perquisites u/s 17(2) (as per Form No.12BA\nwherever applicable)\n44,000.00\nc) Profits in lieu of salary under section 17(3) (as per Form\nNo.12BA, wherever applicable)\n10,000.00\nTotal\n1,78,822.00\n2. Less: Allowance to the Extent u/s 10\nConveyance Allowance\nTransport Allowance\n3. Balances (1-2)\n4. Deductions\nProfessional Tax (Tax on Employment)\n5. Aggregate of deductions\n6. Income Chargable under the head 'salaries' (3-5)\n7. Add: Any other income reported by the employee\nIncome From House Property\nIncome From Other Sources\nInterest on Housing Loan - Self Occupied\n800.00\n40,000.00\n40,800.00\n1,38,022.00\n600.00\n600.00\n1,37,422.00\n(-)1,57,500.00\n1,05,000.00\n(-)52,500.00\n84,922.00\n8. Gross total income (6+7)\n9. Deductions under Chapter VIA\n(A) Section 80C, 80CCC and 80CCD\ni) Section 80C\n15,903.00\nEmployee Provident Fund (EPF)\n8,903.00\nInsurance Premium\n7,000.00",
+                "filename": "form_16_1.jpg",
+                "identified_type": "AI Extracted",
+                "message": "Data extracted using Gemini AI.",
+                "status": "success",
+                "stored_path": "/uploaded_documents/20250526133142_2574e49bcc_form_16_1.jpg"
+            }
+        ],
+        "final_tax_computation_summary": {
+            "calculated_gross_income": 178822,
+            "calculated_total_deductions": 224003,
+            "computed_taxable_income": 0,
+            "estimated_tax_payable": 0,
+            "notes": "This is a simulated rule-based tax computation. Please consult a tax professional for accurate filing.",
+            "refund_due_from_tax": 4728,
+            "regime_consideration": "Old Regime",
+            "tax_due_to_government": 0,
+            "total_tds_credit": 4728
+        },
+        "message": "Documents processed and tax computed successfully using AI (simulated).",
+        "status": "success",
+        "timestamp": "2025-05-26T08:02:25.127222",
+        "user_id": "user_001",
+        "suggestions_from_gemini": [
+            "*   **Review Existing Deductions:** Ensure all claimed deductions (Section 80C, Section 24(b)) are accurate and supported by documentation. Double-check if any eligible deductions were missed. It appears the interest on home loan deduction has more than offset the current salary, check if this is accurate and valid.",
+            "*   **Optimize Section 80C Investments:** While \u20b915,903 is claimed under Section 80C, explore fully utilizing the limit (\u20b91,00,000 in FY 2014-15) by investing in ELSS (Equity Linked Savings Scheme), PPF (Public Provident Fund), or NSC (National Savings Certificate) for future years to provide additional tax savings in the years where interest on home loan deduction is less.",
+            "*   **Plan for Future Tax Years:** Project income and expenses for the next financial year to estimate tax liability. This will help in making informed investment decisions to maximize tax savings proactively.",
+            "*   **Consider Professional Tax Planning:** Given the complexity of tax laws, consulting a qualified tax advisor is recommended to explore all possible tax-saving avenues and ensure compliance."
+        ],
+        "ml_prediction_summary": {
+            "predicted_tax_liability": 1359.89,
+            "predicted_refund_due": 3368.11,
+            "predicted_additional_due": null,
+            "predicted_tax_regime": "New",
+            "notes": "ML model predictions successfully generated."
+        }
+    }
+]

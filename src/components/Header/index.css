@@ -1,0 +1,123 @@
+.header-container {
+    background-color: #2c3e50; /* Dark blue-grey */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Makes header stick to top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo-image{
+    width:70px;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.header-logo {
+    height: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+    border-radius: 5px; /* Slightly rounded logo */
+}
+
+.header-app-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.header-logo-link:hover .header-app-name {
+    color: #a0c4ff; /* Lighter blue on hover */
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link, .nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit; /* Inherit font from body */
+}
+
+.nav-link:hover, .nav-button:hover {
+    background-color: #34495e; /* Slightly lighter dark blue-grey */
+    transform: translateY(-2px);
+}
+
+.nav-link.active, .nav-button.active {
+    background-color: #007bff; /* Highlight active link/button */
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Red for logout */
+    margin-left: 15px; /* Space from other buttons */
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .header-left {
+        margin-bottom: 15px;
+    }
+
+    .header-app-name {
+        font-size: 1.5em;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-link, .nav-button {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logout-button {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-top: 10px; /* Add top margin */
+    }
+}

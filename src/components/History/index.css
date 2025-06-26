@@ -1,0 +1,174 @@
+.history-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.history-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 30px;
+  font-weight: 700;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.loading-message,
+.error-message,
+.no-history-message {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.loading-message {
+  background-color: #e7f3ff;
+  color: #007bff;
+  border: 1px solid #b3d9ff;
+}
+
+.error-message {
+  background-color: #ffebe9;
+  color: #dc3545;
+  border: 1px solid #f5c6cb;
+}
+
+.no-history-message {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.history-item-title {
+  font-size: 1.8em;
+  color: #34495e; /* Darker grey-blue */
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.history-item p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.history-item strong {
+  color: #555;
+}
+
+.summary-section {
+  background-color: #f0f4f8;
+  border-left: 5px solid #007bff;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.summary-section h4 {
+  color: #0056b3;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.doc-summary-item {
+  background-color: #e9eff5;
+  border: 1px solid #d0e0ed;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.doc-summary-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.doc-summary-item a:hover {
+  text-decoration: underline;
+}
+
+.status-success {
+  color: #28a745; /* Green */
+  font-weight: bold;
+}
+
+.status-failed {
+  color: #dc3545; /* Red */
+  font-weight: bold;
+}
+
+.status-unknown {
+  color: #6c757d; /* Grey */
+  font-weight: bold;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.data-item {
+  background-color: #eef2f6;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid #dce4ed;
+}
+
+.highlight-regime {
+  font-weight: bold;
+  color: #28a745; /* Green to highlight regime */
+}
+
+.refund-amount {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.tax-due-amount {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.suggestions-list {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-top: 15px;
+}
+
+.suggestions-list li {
+  margin-bottom: 8px;
+  color: #333;
+}

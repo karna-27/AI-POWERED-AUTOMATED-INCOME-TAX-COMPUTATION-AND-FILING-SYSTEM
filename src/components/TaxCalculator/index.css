@@ -1,0 +1,206 @@
+.tax-calculator-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.tax-calculator-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.calculator-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-section h3 {
+    color: #34495e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.calculator-section .note {
+    font-size: 0.9em;
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.calculate-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.calculate-button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.calculate-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.calculation-results {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #e7f3ff; /* Lighter blue background for results */
+    border: 1px solid #c2e0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.calculation-results h3 {
+    color: #0056b3;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c2e0f0;
+    text-align: center;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d0e0ed;
+}
+
+.result-item:last-of-type {
+    border-bottom: none;
+}
+
+.result-item p {
+    margin: 5px 0;
+}
+
+.result-item strong {
+    color: #333;
+}
+
+.highlight-amount {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #28a745; /* Green for optimal amount */
+}
+
+.highlight-regime {
+    font-weight: bold;
+    color: #007bff; /* Blue for optimal regime */
+}
+
+.optimal-result {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #a0c4ff;
+    text-align: center;
+}
+
+.optimal-result p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.notes {
+    font-size: 0.9em;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 25px;
+    border-top: 1px dashed #d0e0ed;
+    padding-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tax-calculator-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    .tax-calculator-title {
+        font-size: 2em;
+    }
+    .calculator-section h3 {
+        font-size: 1.5em;
+    }
+    .calculation-results h3 {
+        font-size: 1.8em;
+    }
+    .form-input, .calculate-button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}

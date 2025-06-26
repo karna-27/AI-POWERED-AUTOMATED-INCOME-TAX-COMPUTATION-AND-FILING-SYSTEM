@@ -1,0 +1,209 @@
+/* Dashboard Page Container */
+.dashboard-page {
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Main Dashboard Content Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Dashboard Header Section */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-header h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.dashboard-header p {
+    font-size: 1.2em;
+    color: #555;
+    font-style: italic;
+}
+
+/* Card Section for Dashboard Summary */
+.dashboard-card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    font-size: 1.6em;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 1.05em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.dashboard-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-card ul li {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.dashboard-card ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dashboard-card ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Status specific styling */
+.status-pending {
+    color: #f39c12; /* Orange for pending */
+    font-weight: bold;
+}
+.status-completed {
+    color: #27ae60; /* Green for completed */
+    font-weight: bold;
+}
+.status-review {
+    color: #2980b9; /* Blue for review */
+    font-weight: bold;
+}
+
+/* Action buttons within cards */
+.dashboard-action-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: inline-block; /* Allows side-by-side if multiple */
+}
+
+.dashboard-action-button:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-action-button.secondary {
+    background-color: #6c757d; /* Grey for secondary action */
+}
+
+.dashboard-action-button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Insights Section */
+.dashboard-insights {
+    background-color: #e6f7ff; /* Light blue background */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #cceeff;
+    text-align: center;
+}
+
+.dashboard-insights h2 {
+    font-size: 2.2em;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.dashboard-insights p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Loading and Error states */
+.loading-state, .error-state {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.error-state .error-message {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+    .dashboard-header h1 {
+        font-size: 2.2em;
+    }
+    .dashboard-card-section {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-container {
+        margin: 15px;
+        padding: 15px;
+    }
+    .dashboard-header h1 {
+        font-size: 1.8em;
+    }
+    .dashboard-header p {
+        font-size: 1em;
+    }
+    .dashboard-card h3 {
+        font-size: 1.4em;
+    }
+    .dashboard-card p, .dashboard-card ul li {
+        font-size: 0.95em;
+    }
+    .dashboard-action-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+.dashboard-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

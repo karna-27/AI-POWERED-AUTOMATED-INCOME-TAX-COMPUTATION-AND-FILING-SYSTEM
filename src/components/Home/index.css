@@ -1,0 +1,197 @@
+.home-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.4em;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* For button-like links */
+  display: inline-block; /* For button-like links */
+}
+
+.btn-primary {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: 2px solid #28a745;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f0f4f8;
+}
+
+.features-section h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.how-it-works h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.how-it-works ol {
+  list-style: none; /* Remove default numbering */
+  counter-reset: step-counter; /* Initialize counter */
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.how-it-works li {
+  counter-increment: step-counter; /* Increment counter for each list item */
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #e7f3ff;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+  position: relative;
+  text-align: left;
+  padding-left: 70px; /* Make space for the number */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.how-it-works li::before {
+  content: counter(step-counter); /* Display the counter */
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.how-it-works li strong {
+  color: #0056b3;
+}
+
+/* Call to Action Final */
+.call-to-action-final {
+  background-color: #34495e; /* Dark blue-grey */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action-final p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
